@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "88576965010",
+    "firebase_url": "https://littlegarden-f56ac.firebaseio.com",
+    "project_id": "littlegarden-f56ac",
+    "storage_bucket": "littlegarden-f56ac.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:88576965010:android:818eec9c71bed4da52a94b",
+        "android_client_info": {
+          "package_name": "com.appsinventiv.littlegarden"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "88576965010-nnjr70uq0pu3ms1g4384pct8c7ifsbml.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.appsinventiv.littlegarden",
+            "certificate_hash": "fa7734f56677f3ea319837d95cad6564d25b63ef"
+          }
+        },
+        {
+          "client_id": "88576965010-dmb04v1monh6vcrfgsg19pisub5rn0lr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDqclT2fl-a3QNdsaBVxyGm5cnO5NyDkbg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "88576965010-dmb04v1monh6vcrfgsg19pisub5rn0lr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
