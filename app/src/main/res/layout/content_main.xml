@@ -32,11 +32,13 @@
             app:dotsSize="5dp"
             app:dotsWidthFactor="3" />
 
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerview"
             android:layout_marginTop="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
+
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabs"

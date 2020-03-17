@@ -174,39 +174,39 @@ public class CartActivity extends AppCompatActivity {
         placeOrder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                placeOrderNow("paypal");
-//                final Dialog dialog = new Dialog(CartActivity.this);
-//                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-//
-//                LayoutInflater layoutInflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-//
-//                View layout = layoutInflater.inflate(R.layout.alert_dialog_payment, null);
-//
-//                dialog.setContentView(layout);
-//
-//                ImageView paypp = layout.findViewById(R.id.paypp);
-//                ImageView stri = layout.findViewById(R.id.stri);
-//                stri.setOnClickListener(new View.OnClickListener() {
-//                    @Override
-//                    public void onClick(View v) {
-//                        dialog.dismiss();
-//                        Intent intent = new Intent(CartActivity.this, StripeCheckOut.class);
-//                        startActivityForResult(intent, STRIPE_PAYMENT_DONE);
-//                    }
-//                });
-//                paypp.setOnClickListener(new View.OnClickListener() {
-//                    @Override
-//                    public void onClick(View v) {
+//                placeOrderNow("paypal");
+                final Dialog dialog = new Dialog(CartActivity.this);
+                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+
+                LayoutInflater layoutInflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+
+                View layout = layoutInflater.inflate(R.layout.alert_dialog_payment, null);
+
+                dialog.setContentView(layout);
+
+                ImageView paypp = layout.findViewById(R.id.paypp);
+                ImageView stri = layout.findViewById(R.id.stri);
+                stri.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        dialog.dismiss();
+                        Intent intent = new Intent(CartActivity.this, StripeCheckOut.class);
+                        startActivityForResult(intent, STRIPE_PAYMENT_DONE);
+                    }
+                });
+                paypp.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
 //                        dialog.dismiss();
 //
 //                        String title = "Little Garden";
 //                        BigDecimal Amount = BigDecimal.valueOf(total);
 //                        startPurchasePayPal(title, Amount);
-//                    }
-//                });
-//
-//
-//                dialog.show();
+                    }
+                });
+
+
+                dialog.show();
 
 
             }
@@ -267,7 +267,7 @@ public class CartActivity extends AppCompatActivity {
         String finalUrl = "";
         String abadac = String.format("%.2f", total);
 
-        finalUrl = finalUrl + "/lilgarden/api/placeorder?cooking_time=30&cost=" + (int) distn + "&totalPrice=" + abadac;
+        finalUrl = finalUrl + "/api/placeorder?cooking_time=30&cost=" + (int) distn + "&totalPrice=" + abadac;
         int count = 0;
 
 //        for (BookingModel model : tableList) {

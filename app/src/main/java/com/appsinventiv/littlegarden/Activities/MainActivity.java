@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity
     MainSliderAdapter mViewPagerAdapter;
     RecyclerView recyclerview;
     HomeCategoryAdapter adaptera;
-    private List<NewCategoryModel> itemList = new ArrayList<>();
+    List<NewCategoryModel> itemList = new ArrayList<>();
     private ArrayList<Category> categorylist = new ArrayList<>();
     public static List<Product> additionalItems = new ArrayList<>();
     public static HashMap<String, Integer> categoryMap = new HashMap<>();
@@ -84,16 +84,22 @@ public class MainActivity extends AppCompatActivity
 
         recyclerview.setLayoutManager(new LinearLayoutManager(this, RecyclerView.HORIZONTAL, false));
 
-
-        itemList.add(new NewCategoryModel("Pizza", R.drawable.pizza));
-        itemList.add(new NewCategoryModel("Chinese", R.drawable.chinese));
-        itemList.add(new NewCategoryModel("Taco", R.drawable.taco));
-        itemList.add(new NewCategoryModel("Burger", R.drawable.burger));
-        itemList.add(new NewCategoryModel("Coffee", R.drawable.coffee));
-
+        itemList.clear();
         adaptera = new HomeCategoryAdapter(this, itemList);
 
+        itemList.add(new NewCategoryModel("Appetizer and Salads", R.drawable.appetizer));
+        itemList.add(new NewCategoryModel("Pies and Pastries", R.drawable.pies));
+        itemList.add(new NewCategoryModel("Traditional deserts", R.drawable.t_deserts));
+        itemList.add(new NewCategoryModel("Deserts", R.drawable.deserts));
+        itemList.add(new NewCategoryModel("Sandwiches", R.drawable.sandwiches));
+        itemList.add(new NewCategoryModel("Goodfellas meals", R.drawable.goodfellas_meals));
+        itemList.add(new NewCategoryModel("Soups", R.drawable.soups));
+        itemList.add(new NewCategoryModel("Juices", R.drawable.juice));
+        itemList.add(new NewCategoryModel("Hot and cold beverages", R.drawable.bavareges));
+
+
         recyclerview.setAdapter(adaptera);
+        adaptera.setItemList(itemList);
 
 
     }
@@ -107,7 +113,7 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onResponse(Call<CategoryResponse> call, Response<CategoryResponse> response) {
                 if (response.isSuccessful()) {
-                    itemList.clear();
+
                     CategoryResponse object = response.body();
                     if (object != null && object.getData() != null) {
                         if (object.getData().size() > 0) {

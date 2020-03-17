@@ -4,8 +4,8 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class AppConfig {
-    public static String BASE_URL = "http://ceta.com.pk/lilgarden/";
-    public static String BASE_URL_Image = "http://ceta.com.pk/lilgarden/core/storage/app/";
+    public static String BASE_URL = "http://lilgarden.net/";
+    public static String BASE_URL_Image = "http://lilgarden.net/core/storage/app/";
     public static String TOKKEN = "http://acnure.com/";
 
     public static Retrofit getRetrofit() {

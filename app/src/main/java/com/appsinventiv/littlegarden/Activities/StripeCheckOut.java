@@ -49,7 +49,7 @@ public class StripeCheckOut extends AppCompatActivity {
      * To run this app, follow the steps here: https://github.com/stripe-samples/accept-a-card-payment#how-to-run-locally
      */
     // 10.0.2.2 is the Android emulator's alias to localhost
-    private static final String BACKEND_URL = "http://saffronclub.com.au/web/api/";
+    private static final String BACKEND_URL = "http://lilgarden.net/api/";
 
     private OkHttpClient httpClient = new OkHttpClient();
     private String paymentIntentClientSecret;

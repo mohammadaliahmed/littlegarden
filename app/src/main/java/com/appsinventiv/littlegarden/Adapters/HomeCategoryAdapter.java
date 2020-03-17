@@ -32,6 +32,10 @@ public class HomeCategoryAdapter extends RecyclerView.Adapter<HomeCategoryAdapte
         this.itemList = itemList;
     }
 
+    public void setItemList(List<NewCategoryModel> itemList) {
+        this.itemList = itemList;
+        notifyDataSetChanged();
+    }
 
     @NonNull
     @Override
